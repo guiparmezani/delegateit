@@ -13,10 +13,14 @@ hr
 h1 
   font-family: $font-family
   font-size: 71px
-  color: #FFFFFF
   line-height: 84px
-  margin-top: 50px
+  color: #FFFFFF
   margin-bottom: 30px
+  @media (max-width: $screen-xs-max) 
+    font-size: 40px
+    line-height: 54px
+  @media (min-width: $screen-sm) 
+    margin-top: 50px
 
 
 h2 
@@ -25,6 +29,9 @@ h2
   color: #FFFFFF
   line-height: 102px
   margin: 50px 0
+  @media (max-width: $screen-xs-max) 
+    font-size: 38px
+    line-height: 58px
 
 
 h3 
@@ -34,6 +41,9 @@ h3
   line-height: 46px
   margin: 40px 0
   font-weight: 300
+  @media (max-width: $screen-xs-max) 
+    font-size: 36px
+    line-height: 38px
 
 
 p 
@@ -53,11 +63,17 @@ footer
   a 
     color: #7D7D7D
     line-height: 15px
-    padding-right: 40px
     &:hover 
       color: #26a0be
-    
-  
+    @media (min-width: $screen-sm)
+      padding-right: 40px
+  .brand
+    @media (min-width: $screen-sm)
+      float: lef
+  @media (max-width: $screen-xs-max)
+    text-align: center
+    p
+      font-size: 18px
 
 
 .small 
@@ -67,6 +83,7 @@ footer
 .navbar 
   border: none
   padding: 20px 0
+  margin-bottom: 0
 
 
 .navbar-default 
@@ -89,10 +106,12 @@ footer
 
 .navbar-collapse 
   margin-top: 35px
-  @media screen and (max-width: $screen-xs-max) 
+  @media (max-width: $screen-xs-max) 
     margin-top: 20px
     border: none
     box-shadow: none
+  @media (min-width: $screen-sm) 
+    float: right
   
 
 
@@ -106,6 +125,7 @@ footer
 
 .navbar-header 
   width: 100%
+  text-align: center
 
 
 input::-webkit-input-placeholder
@@ -133,6 +153,12 @@ input:-moz-placeholder
   font-size: 120%
   font-weight: 900
   letter-spacing: 1px
+
+.brand
+  img
+    max-width: 100%
+  @media (min-width: $screen-sm)
+    float: left
 
 
 .btn-brand 
@@ -198,32 +224,36 @@ input:-moz-placeholder
 
 
 .mobile 
-  @media screen and (min-width: $screen-sm) 
+  @media (min-width: $screen-sm) 
     display: none
   
-
+.tablet 
+  @media (max-width: $screen-xs-max) 
+    display: none
 
 .desktop 
-  @media screen and (max-width: $screen-xs-max) 
+  @media (max-width: $screen-sm-max) 
     display: none
   
 
 
 .horizontal-center 
-  display: table
   margin: 0 auto
 
 
-.reduced-width 
-  width: 60%
+.reduced-width
+  @media (min-width: $screen-sm)
+    width: 60%
 
 
 .header-block 
   padding: 50px 0 15px
+  @media (max-width: $screen-xs-max) 
+    padding: 20px 0 15px
 
 
 .right-extra-padding 
-  @media screen and (min-width: $screen-sm) 
+  @media (min-width: $screen-sm) 
     padding-right: 60px
   
 
@@ -233,10 +263,10 @@ input:-moz-placeholder
 
 
 .push-far-down 
-  @media screen and (min-width: $screen-sm) 
+  @media (min-width: $screen-sm) 
     margin-top: 250px
   
-  @media screen and (max-width: $screen-xs-max) 
+  @media (max-width: $screen-xs-max) 
     margin-top: 50px
   
 
@@ -254,13 +284,15 @@ input:-moz-placeholder
   font-size: 84px
   color: #32C8DE
   line-height: 68px
+  @media (max-width: $screen-xs-max) 
+    font-size: 42px
+
 
 
 .balloon 
   background: url(../images/balloon.png) top left no-repeat
   background-size: contain
   min-height: 70px
-  margin-left: -45px
   p 
     margin-left: 55px
     padding-top: 7px
@@ -269,69 +301,107 @@ input:-moz-placeholder
     color: #2D2F35
     line-height: 49px
     font-weight: 300
-  
+  @media (min-width: $screen-sm)
+    margin-left: -45px
+
 
 
 .section 
-  padding: 50px 0
+  padding-top: 25px
+  padding-bottom: 25px
+  @media (min-width: $screen-sm)
+    padding-top: 50px
+    padding-bottom: 50px
 
 
 .first-section 
-  height: 825px
   background: #2D2F35
   background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
+  .second-paragraph
+    @media (min-width: $screen-md)
+      margin-bottom: -100px
+  @media (min-width: $screen-lg)
+    height: 825px
+  @media (min-width: $screen-sm)
+    padding-bottom: 50px
 
 
 .third-section 
   background-color: #f4f4f4
   padding-top: 30px
-  .messages > img 
-    max-width: 49%
-    margin-bottom: 15px
-    border: 2px solid #e6e6e6
-  
+  .messages 
+    text-align: center
+    img 
+      margin-bottom: 15px
+      border: 2px solid #e6e6e6
+      max-width: 60%
+
   .tab-text 
     p, h3 
       padding-left: 150px
-    
     p 
       margin: 15px 0 30px
+    .bubble 
+      border: 1px solid #25B5D1
+      border-radius: 40px
+      h3 
+        font-family: 'museo-sans'
+        font-size: 41px
+        color: #2D2F35
+        line-height: 46px
+        letter-spacing: -3px
+        margin: 10px 0
+        @media (max-width: $screen-xs-max)
+          padding-left: 0
+          margin-left: 20px
+      h2 
+        float: left
+        margin-left: 73px
+        margin-top: 10px
+        z-index: 500
+        position: relative
+        font-family: $font-family-helvetica
+        font-size: 41px
+        color: #FFFFFF
+        line-height: 49px
+      @media (min-width: $screen-sm)
+        margin-right: 50px
+      @media (max-width: $screen-xs-max)
+        width: 100%
+    .step-row 
+      min-height: 150px
+      @media (max-width: $screen-xs-max)
+        p
+          padding-left: 0
+          margin-left: 20px
+    .got-questions
+      padding-left: 0
+      @media (min-width: $screen-sm)
+        font-size: 35px
+        line-height: 32px
+        margin-top: 80px
+        padding-left: 150px
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
+      max-width: 80%
+      margin: 0 auto
+    @media (max-width: $screen-xs-max)
+      margin-top: 15px
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max)
+      margin-top: 105px
+
+  .yellow-delegate
+    text-align: center
+    @media (min-width: $screen-sm)
+      text-align: right
+
     
   
-  .bubble 
-    border: 1px solid #25B5D1
-    border-radius: 40px
-    margin-right: 50px
-    h3 
-      font-family: 'museo-sans'
-      font-size: 41px
-      color: #2D2F35
-      line-height: 46px
-      letter-spacing: -3px
-      margin: 10px 0
-    
-    h2 
-      float: left
-      margin-left: 73px
-      margin-top: 10px
-      z-index: 500
-      position: relative
-      font-family: $font-family-helvetica
-      font-size: 41px
-      color: #FFFFFF
-      line-height: 49px
-    
-  
-  .step-row 
-    min-height: 150px
   
   @media (min-width: $screen-md) 
     .col-md-6 
       float: none
       display: inline-block
-      vertical-align: middle
-    
-  
+      vertical-align: top
 
 
 .aqua-box 
@@ -353,9 +423,11 @@ input:-moz-placeholder
     line-height: 33px
   
   form 
-    width: 80%
-    padding: 90px 0
-  
+    padding: 40px 0
+    @media (min-width: $screen-sm) 
+      width: 80%
+      padding: 90px 0
+
   input 
     height: 60px
     width: 370px
@@ -368,6 +440,13 @@ input:-moz-placeholder
     color: #FFFFFF
     line-height: 31px
     margin: 0 20px 20px
+    @media (max-width: $screen-xs-max)
+      width: auto
+      margin: 15px 0
+  input[type="submit"]
+    display: block
+    margin: 25px auto !important
+
   
 
 
