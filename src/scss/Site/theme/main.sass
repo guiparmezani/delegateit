@@ -1,0 +1,415 @@
+$font-family:  'museo-sans', "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
+
+@font-face 
+  font-family: 'museo-sans'
+  src: url('../fonts/MuseoSans-500.otf') /* IE9 Compat Modes */
+
+
+hr 
+  border-top: 1px solid #51555F
+
+
+h1 
+  font-family: $font-family
+  font-size: 71px
+  color: #FFFFFF
+  line-height: 84px
+  margin-top: 50px
+  margin-bottom: 30px
+
+
+h2 
+  font-family: $font-family-helvetica
+  font-size: 75px
+  color: #FFFFFF
+  line-height: 102px
+  margin: 50px 0
+
+
+h3 
+  font-family: $font-family
+  font-size: 45px
+  color: #2D2F35
+  line-height: 46px
+  margin: 40px 0
+  font-weight: 300
+
+
+p 
+  font-family: $font-family-helvetica
+  font-size: 22px
+  color: #747578
+  line-height: 33px
+  font-weight: 100
+
+
+a 
+  text-decoration: none !important
+
+
+footer 
+  padding: 40px 0
+  a 
+    color: #7D7D7D
+    line-height: 15px
+    padding-right: 40px
+    &:hover 
+      color: #26a0be
+    
+  
+
+
+.small 
+  transform: scale(.9)
+
+
+.navbar 
+  border: none
+  padding: 20px 0
+
+
+.navbar-default 
+  background-color: transparent
+  border: none
+  .navbar-nav >li > a 
+    background: #32C8DE !important
+    padding: 18px 35px
+    border-radius: 70px
+    font-family: 'museo-sans'
+    font-size: 15px
+    line-height: 18px
+    text-transform: uppercase
+    color: white !important
+    &:hover 
+      opacity: .8
+    
+  
+
+
+.navbar-collapse 
+  margin-top: 35px
+  @media screen and (max-width: $screen-xs-max) 
+    margin-top: 20px
+    border: none
+    box-shadow: none
+  
+
+
+.btn 
+  color: #FFF !important
+  @include transition(all .2s)
+  &:hover 
+    opacity: .8
+  
+
+
+.navbar-header 
+  width: 100%
+
+
+input::-webkit-input-placeholder
+  color: #FFF
+
+
+input:-moz-placeholder 
+  color: #FFF
+
+
+.btn 
+  border-radius: 0
+  border: none
+  padding: 4px 15px
+  font-size: 100%
+
+.btn 
+  margin-top: 3px  
+.btn-lg 
+  font-size: 110%
+  padding: 15px 30px
+
+.btn-xl 
+  padding: 8px 3em
+  font-size: 120%
+  font-weight: 900
+  letter-spacing: 1px
+
+
+.btn-brand 
+  background: #32C8DE
+  padding: 15px 40px
+  border-radius: 70px
+  font-family: 'museo-sans'
+  font-size: 15px
+  line-height: 18px
+  text-transform: uppercase
+  color: white
+
+
+.btn-brand-yellow 
+  background: #FFC539
+  padding: 15px 40px
+  border-radius: 70px
+  font-family: 'museo-sans'
+  font-size: 15px
+  line-height: 18px
+  text-transform: uppercase
+  color: white
+
+
+.submit 
+  background-color: white !important
+  color: #2BAFCA !important
+  padding-left: 0 !important
+  width: 280px !important
+  font-weight: 500 !important
+  margin: 60px 0 !important
+
+
+.btn-order 
+  border: 2px solid rgb(108, 14, 36)
+  color: rgb(108, 14, 36)
+  background-color: rgb(255, 255, 255)
+  font-weight: 600
+
+
+.text-tall 
+  text-transform: uppercase
+
+
+.text-center 
+  text-align: center
+
+
+.text-left 
+  text-align: left
+
+
+.text-right 
+  text-align: right
+
+
+.text-italic 
+  font-style: italic
+
+
+.tab 
+  padding-left: 30px
+
+
+.mobile 
+  @media screen and (min-width: $screen-sm) 
+    display: none
+  
+
+
+.desktop 
+  @media screen and (max-width: $screen-xs-max) 
+    display: none
+  
+
+
+.horizontal-center 
+  display: table
+  margin: 0 auto
+
+
+.reduced-width 
+  width: 60%
+
+
+.header-block 
+  padding: 50px 0 15px
+
+
+.right-extra-padding 
+  @media screen and (min-width: $screen-sm) 
+    padding-right: 60px
+  
+
+
+.pushdown 
+  margin-top: 17px
+
+
+.push-far-down 
+  @media screen and (min-width: $screen-sm) 
+    margin-top: 250px
+  
+  @media screen and (max-width: $screen-xs-max) 
+    margin-top: 50px
+  
+
+
+.span-brand 
+  font-family: 'museo-sans'
+  font-size: 21px
+  color: #ffbc1a
+  line-height: 25px
+
+
+.phone-number 
+  font-family: 'museo-sans'
+  font-weight: 900
+  font-size: 84px
+  color: #32C8DE
+  line-height: 68px
+
+
+.balloon 
+  background: url(../images/balloon.png) top left no-repeat
+  background-size: contain
+  min-height: 70px
+  margin-left: -45px
+  p 
+    margin-left: 55px
+    padding-top: 7px
+    font-family: $font-family-helvetica
+    font-size: 41px
+    color: #2D2F35
+    line-height: 49px
+    font-weight: 300
+  
+
+
+.section 
+  padding: 50px 0
+
+
+.first-section 
+  height: 825px
+  background: #2D2F35
+  background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
+
+
+.third-section 
+  background-color: #f4f4f4
+  padding-top: 30px
+  .messages > img 
+    max-width: 49%
+    margin-bottom: 15px
+    border: 2px solid #e6e6e6
+  
+  .tab-text 
+    p, h3 
+      padding-left: 150px
+    
+    p 
+      margin: 15px 0 30px
+    
+  
+  .bubble 
+    border: 1px solid #25B5D1
+    border-radius: 40px
+    margin-right: 50px
+    h3 
+      font-family: 'museo-sans'
+      font-size: 41px
+      color: #2D2F35
+      line-height: 46px
+      letter-spacing: -3px
+      margin: 10px 0
+    
+    h2 
+      float: left
+      margin-left: 73px
+      margin-top: 10px
+      z-index: 500
+      position: relative
+      font-family: $font-family-helvetica
+      font-size: 41px
+      color: #FFFFFF
+      line-height: 49px
+    
+  
+  .step-row 
+    min-height: 150px
+  
+  @media (min-width: $screen-md) 
+    .col-md-6 
+      float: none
+      display: inline-block
+      vertical-align: middle
+    
+  
+
+
+.aqua-box 
+  background: #2BAFCA
+  text-align: center
+  h2 
+    padding: 50px 0
+    margin: 0
+  
+  hr 
+    border-top: 1px solid #52C2D9
+    margin-top: 0
+  
+  p 
+    margin-top: 60px
+    font-family: $font-family-helvetica
+    font-size: 22px
+    color: #FFFFFF
+    line-height: 33px
+  
+  form 
+    width: 80%
+    padding: 90px 0
+  
+  input 
+    height: 60px
+    width: 370px
+    padding-left: 40px
+    background-color: transparent
+    border: 1px solid #FFFFFF
+    border-radius: 40px
+    font-size: 28px
+    font-weight: 100
+    color: #FFFFFF
+    line-height: 31px
+    margin: 0 20px 20px
+  
+
+
+.carousel-indicators 
+  bottom: -40px
+  li 
+    border: 1px solid #7b7b81
+  
+  .active 
+    background-color: #4eb9f6
+  
+
+
+.carousel-inner > .item > img 
+  max-width: 300px
+  display: table
+  margin: auto
+
+
+.round-border 
+  text-align: center
+  width: 62px
+  font-size: 40px
+  border: 3px solid
+  border-radius: 35px
+
+
+.giant-logo 
+  position: absolute
+  top: -85px
+  left: -100px
+
+
+.links 
+  margin-top: 60px
+
+
+.first-paragraph 
+  text-align: center
+  p 
+    font-family: $font-family
+    font-size: 25px
+    color: #FFFFFF
+    line-height: 31px
+  
