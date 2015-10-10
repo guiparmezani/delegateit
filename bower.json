@@ -25,6 +25,7 @@
     "bootstrap-sass": "~3.3.5",
     "components-font-awesome": "~4.4.0",
     "jquery": "1.11.*",
-    "jquery.scrollTo": "~2.1.2"
+    "jquery.scrollTo": "~2.1.2",
+    "underscore": "~1.8.3"
   }
 }
