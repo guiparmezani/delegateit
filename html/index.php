@@ -27,7 +27,7 @@
                   <img src="./images/logo-delegateit-gradient.png" title="DelegateIt" style="margin-top: 12px">
                 </a>
                 <div class="navbar-collapse" id="menus">
-                  <a href="#" class="btn btn-lg btn-brand">Delegate Now</a>
+                  <a href="#" class="btn btn-lg btn-brand delegate-now">Delegate Now</a>
                 </div>
               </div>
             </nav>
@@ -50,7 +50,7 @@
 
       <!-- Second section -->
       <div class="container section">
-        <div class="row">
+        <div class="row left-roll">
           <div class="col-sm-6 right-extra-padding">
             <div class="round-border">
               ?
@@ -70,7 +70,7 @@
       <!-- Third section -->
       <div class="third-section section">
         <div class="container">
-          <div class="row">
+          <div class="row right-roll">
             <div class="col-md-6 messages">
               <img src="./images/message1.jpg" alt="">
             </div><!--
@@ -98,7 +98,7 @@
             <p>You approve and we send you a secure invoice via SMS.</p>
           </div>
           <div class="yellow-delegate">
-            <a href="#" class="btn btn-lg btn-brand-yellow pushdown">Delegate Now</a>
+            <a href="#" class="btn btn-lg btn-brand-yellow pushdown delegate-now">Delegate Now</a>
           </div>
           <div class="pushdown">
             <h3 class="got-questions">Got any Questions? Check out our FAQ Page!</h3>
@@ -109,7 +109,7 @@
   </div>
 
   <!-- Fourth section -->
-  <div class="aqua-box">
+  <div class="aqua-box blured" id="delegate-form">
     <div class="container">
       <h2>delegate now</h2>
       <div>
