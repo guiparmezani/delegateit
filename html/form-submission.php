@@ -10,9 +10,14 @@
   echo "phone: " . $_POST["phone"]. "<br>";
   echo "zip: " . $_POST["zip"]. "<br>";
 
+  $first_name = $_POST["first_name"];
+  $last_name = $_POST["last_name"];
+  $phone = $_POST["phone"];
+  $zip = $_POST["zip"];
+
 	$servername = "localhost";
-	$username = "web";
-	$password = "web";
+	$username = "parmezan_root";
+	$password = "Delegateit";
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password);
@@ -21,5 +26,14 @@
 	if ($conn->connect_error) {
 	  die("Connection failed: " . $conn->connect_error);
 	} 
-	echo "Connected successfully";
+
+	$sql = "INSERT INTO parmezan_delegateit.CLIENT (FIRST_NAME, LAST_NAME, PHONE, ZIP) VALUES ('" . $first_name . "', '" . $last_name . "', '" . $phone . "', '" . $zip . "');";
+
+	if ($conn->query($sql) === TRUE) {
+	    echo "New record created successfully";
+	} else {
+	    echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+	$conn->close();
 ?>

@@ -14,7 +14,7 @@
     <div class="first-section">
       <div class="container">
         <!-- HEADER -->
-        <header class="navbar navbar-static-top" role="banner">
+        <header class="navbar navbar-static-top" role="banner" id="top">
           <nav class="navbar navbar-default">
             <div class="navbar-header">
                 <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menus">
@@ -49,8 +49,8 @@
       </div>
 
       <!-- Second section -->
-      <div class="container section">
-        <div class="row left-roll">
+      <div class="container section second-section left-roll">
+        <div class="row">
           <div class="col-sm-6 right-extra-padding">
             <div class="round-border">
               ?

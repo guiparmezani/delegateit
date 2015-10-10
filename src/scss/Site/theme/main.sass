@@ -69,7 +69,7 @@ footer
       padding-right: 40px
   .brand
     @media (min-width: $screen-sm)
-      float: lef
+      float: left
   @media (max-width: $screen-xs-max)
     text-align: center
     p
@@ -83,6 +83,11 @@ footer
   -webkit-filter: blur(5px) !important
   filter: blur(5px) !important
 
+.left-roll
+  left: -2500px
+
+.right-roll
+  left: 2500px
 
 .navbar 
   border: none
@@ -159,6 +164,7 @@ input:-moz-placeholder
   letter-spacing: 1px
 
 .brand
+  cursor: default
   img
     max-width: 100%
   @media (min-width: $screen-sm)
@@ -333,6 +339,9 @@ input:-moz-placeholder
 .third-section 
   background-color: #f4f4f4
   padding-top: 30px
+  .right-roll
+    @include transition(all .8s)
+    position: relative
   .messages 
     text-align: center
     img 
@@ -413,7 +422,7 @@ input:-moz-placeholder
   text-align: center
   -webkit-filter: blur(0px)
   filter: blur(0px)
-  @include transition(all 2s)
+  @include transition(all 3s)
   h2 
     padding: 50px 0
     margin: 0
@@ -472,13 +481,15 @@ input:-moz-placeholder
   display: table
   margin: auto
 
-
-.round-border 
-  text-align: center
-  width: 62px
-  font-size: 40px
-  border: 3px solid
-  border-radius: 35px
+.second-section
+  @include transition(all .8s)
+  position: relative
+  .round-border 
+    text-align: center
+    width: 62px
+    font-size: 40px
+    border: 3px solid
+    border-radius: 35px
 
 
 .giant-logo 

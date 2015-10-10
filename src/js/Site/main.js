@@ -11,4 +11,28 @@ $(document).ready(function() {
 		e.preventDefault();
 		$(window).scrollTo('#delegate-form', 800);
 	});
+
+	$('footer .brand').click(function(e) {
+		e.preventDefault();
+		$(window).scrollTo('#top', 800);
+	});
+
+	$(window).scroll(_.throttle(function(){
+    var scroll = $(window).scrollTop();
+    var halfheight = $(window).height() / 2;
+    
+    if ($(window).width() > 767) {
+    	// Side roll animation
+      if (scroll > $('.left-roll').offset().top-halfheight) {
+      	$('.left-roll').css('left', 0);
+      }
+      if (scroll > $('.right-roll').offset().top-halfheight) {
+      	$('.right-roll').css('left', 0);
+      }
+    	// Unblur animation
+      if (scroll > $('.aqua-box').offset().top-halfheight) {
+        $('.aqua-box').removeClass('blured');
+      }
+    }
+  }));
 });  
