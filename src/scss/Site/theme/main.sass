@@ -84,10 +84,12 @@ footer
   filter: blur(5px) !important
 
 .left-roll
-  left: -2500px
+  @media (min-width: $screen-sm)
+    left: -2500px
 
 .right-roll
-  left: 2500px
+  @media (min-width: $screen-sm)
+    left: 2500px
 
 .navbar 
   border: none
@@ -420,8 +422,6 @@ input:-moz-placeholder
 .aqua-box 
   background: #2BAFCA
   text-align: center
-  -webkit-filter: blur(0px)
-  filter: blur(0px)
   @include transition(all 3s)
   h2 
     padding: 50px 0
@@ -462,6 +462,9 @@ input:-moz-placeholder
   input[type="submit"]
     display: block
     margin: 25px auto !important
+  @media (min-width: $screen-sm)
+    -webkit-filter: blur(0px)
+    filter: blur(0px)
 
   
 
