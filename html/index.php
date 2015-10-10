@@ -130,7 +130,7 @@
         <img src="./images/gray-logo.png" title="DelegateIt" style="margin-top: 12px">
       </a>
       <div class="pull-right links">
-        <p>Any questions contact us at <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
+        <p><a href="docs/privacy-policy.pdf" style="padding: 0;" target="_blank">Privacy Policy</a> | Any questions contact us at <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
       </div>
     </div>
   </footer>
