@@ -17,12 +17,6 @@
         <header class="navbar navbar-static-top" role="banner" id="top">
           <nav class="navbar navbar-default">
             <div class="navbar-header">
-                <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menus">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button> -->
                 <a class="brand" href="#">
                   <img src="./images/logo-delegateit-gradient.png" title="DelegateIt" style="margin-top: 12px">
                 </a>
@@ -31,22 +25,22 @@
                 </div>
               </div>
             </nav>
-          </header>
-          <hr><br>
-          <div class="row">
-            <div class="first-paragraph col-md-7">
-              <h1>Need Something On Vacation?</h1>
-              <p>Whether on vacation or at home send a text to this number and we will get you any item or service you might need:</p>
-              <div class="header-block">
-                <span class="phone-number">512-359-3557</span>
-              </div>
+        </header>
+        <hr><br>
+        <div class="row">
+          <div class="first-paragraph col-md-7">
+            <h1>Need Something On Vacation?</h1>
+            <p>Whether on vacation or at home send a text to this number and we will get you any item or service you might need:</p>
+            <div class="header-block">
+              <span class="phone-number">512-359-3557</span>
             </div>
-            <div class="second-paragraph col-md-5 desktop">
-              <img src="./images/iphone.png" alt="">
-            </div>
+          </div>
+          <div class="second-paragraph col-md-5 desktop">
+            <img src="./images/iphone.png" alt="">
           </div>
         </div>
       </div>
+    </div>
 
       <!-- Second section -->
       <div class="container section second-section left-roll">

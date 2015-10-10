@@ -1,39 +1,33 @@
-<?php 
-  $myfile = fopen("contacts.txt", "a+") or die("Unable to open file!");
-  fwrite($myfile, "First Name: " . $_POST["first_name"] . "\n");
-  fwrite($myfile, "Last Name: " . $_POST["last_name"] . "\n");
-  fwrite($myfile, "Phone: " . $_POST["phone"] . "\n");
-  fwrite($myfile, "Zip: " . $_POST["zip"] . "\n\n");
-  fclose($myfile);
+<div class="first-section section">
+  <div class="container">
+    
+		<?php 
+		  $first_name = $_POST["first_name"];
+		  $last_name = $_POST["last_name"];
+		  $phone = $_POST["phone"];
+		  $zip = $_POST["zip"];
 
-  echo "name: " . $_POST["first_name"] . "<br>last name: " . $_POST["last_name"] . "<br>";
-  echo "phone: " . $_POST["phone"]. "<br>";
-  echo "zip: " . $_POST["zip"]. "<br>";
+			$servername = "localhost";
+			$username = "parmezan_root";
+			$password = "Delegateit";
 
-  $first_name = $_POST["first_name"];
-  $last_name = $_POST["last_name"];
-  $phone = $_POST["phone"];
-  $zip = $_POST["zip"];
+			$conn = new mysqli($servername, $username, $password);
 
-	$servername = "localhost";
-	$username = "parmezan_root";
-	$password = "Delegateit";
+			if ($conn->connect_error) {
+			  die("Connection failed: " . $conn->connect_error);
+			} 
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password);
+			// Writes inputs to database
+			$sql = "INSERT INTO parmezan_delegateit.CLIENT (FIRST_NAME, LAST_NAME, PHONE, ZIP) VALUES ('" . $first_name . "', '" . $last_name . "', '" . $phone . "', '" . $zip . "');";
 
-	// Check connection
-	if ($conn->connect_error) {
-	  die("Connection failed: " . $conn->connect_error);
-	} 
+			if ($conn->query($sql) === TRUE) {
+			  echo "<p style='text-align: center;'>Thank you for registering for our service. We will get back to you shortly.<br>The Delegateit Team.</p>";
+			} else {
+			  echo "Error: " . $sql . "<br>" . $conn->error;
+			}
 
-	$sql = "INSERT INTO parmezan_delegateit.CLIENT (FIRST_NAME, LAST_NAME, PHONE, ZIP) VALUES ('" . $first_name . "', '" . $last_name . "', '" . $phone . "', '" . $zip . "');";
+			$conn->close();
+		?>
 
-	if ($conn->query($sql) === TRUE) {
-	    echo "New record created successfully";
-	} else {
-	    echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
-	$conn->close();
-?>
+	</div>
+</div>
