@@ -28,6 +28,7 @@ $(document).ready(function() {
       }
       if (scroll > $('.right-roll').offset().top-halfheight) {
       	$('.right-roll').css('left', 0);
+      	$('.third-section').css('overflow', 'visible');
       }
     	// Unblur animation
       if (scroll > $('.aqua-box').offset().top-halfheight) {
