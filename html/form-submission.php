@@ -20,9 +20,9 @@
 			$phone = $_POST["phone"];
 			$zip = $_POST["zip"];
 
-			$servername = "localhost";
-			$username = "parmezan_root";
-			$password = "Delegateit";
+			$servername = "waitlistdb.cwfe0qmzkgyc.us-west-2.rds.amazonaws.com";
+			$username = "master";
+			$password = "DelegateIt";
 
 			$conn = new mysqli($servername, $username, $password);
 
@@ -31,7 +31,7 @@
 			} 
 
 			// Writes inputs to database
-			$sql = "INSERT INTO parmezan_delegateit.CLIENT (FIRST_NAME, LAST_NAME, PHONE, ZIP) VALUES ('" . $first_name . "', '" . $last_name . "', '" . $phone . "', '" . $zip . "');";
+			$sql = "INSERT INTO DELEGATEIT.CLIENT (FIRST_NAME, LAST_NAME, PHONE, ZIP) VALUES ('" . $first_name . "', '" . $last_name . "', '" . $phone . "', '" . $zip . "');";
 
 			if ($conn->query($sql) === TRUE) {
 				echo "<p style='text-align: center;'>Thank you for registering for our service. We will get back to you shortly.<br>The <a href='http://delegateit.co'>Delegateit</a> Team.<br><br><a href='http://delegateit.co'>< Back to home</a></p>";
