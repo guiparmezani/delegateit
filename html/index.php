@@ -29,10 +29,11 @@
         <hr><br>
         <div class="row">
           <div class="first-paragraph col-md-7">
-            <h1>Need Something On Vacation?</h1>
-            <p>Whether on vacation or at home send a text to this number and we will get you any item or service you might need:</p>
+            <h1 class="type" data-text="Any Product.<br>Any Service."></h1>
             <div class="header-block">
-              <span class="phone-number">512-359-3557</span>
+              <p>We're your personal concierge and we'll get it for you.</p>
+              <p>Text this number with your request to get started:</p>
+              <span class="phone-number"><a href="tel:5123563557">512-359-3557</a></span>
             </div>
           </div>
           <div class="second-paragraph col-md-5 desktop">
@@ -62,48 +63,48 @@
       </div>
 
       <!-- Third section -->
-      <div class="third-section section">
+      <!-- <div class="third-section section">
         <div class="container">
           <div class="row right-roll">
             <div class="col-md-6 messages">
               <img src="./images/message1.jpg" alt="">
-            </div><!--
-          --><div class="col-md-6 tab-text">
-          <img src="./images/giant-logo.png" class="giant-logo tablet">
-          <div class="step-row">
-            <div class="bubble">
-              <h2 class="tablet">1</h2>
-              <h3>First contact</h3>
+            </div> --><!--
+         --><!-- <div class="col-md-6 tab-text">
+              <img src="./images/giant-logo.png" class="giant-logo tablet">
+              <div class="step-row">
+                <div class="bubble">
+                  <h2 class="tablet">1</h2>
+                  <h3>First contact</h3>
+                </div>
+                <p>Send a text with the details of your request</p>
+              </div>
+              <div class="step-row">
+                <div class="bubble">
+                  <h2 class="tablet">2</h2>
+                  <h3>Welcome</h3>
+                </div>
+                <p>You will receive a confirmation and quote from our team </p>
+              </div>
+              <div class="step-row">
+                <div class="bubble">
+                  <h2 class="tablet">3</h2>
+                  <h3>Ok, go for it!</h3>
+                </div>
+                <p>You approve and we send you a secure invoice via SMS.</p>
+              </div>
+              <div class="yellow-delegate">
+                <a href="#" class="btn btn-lg btn-brand-yellow pushdown delegate-now">Delegate Now</a>
+              </div>
+              <div class="pushdown">
+                <h3 class="got-questions">Got any Questions? Check out our FAQ Page!</h3>
+              </div>
             </div>
-            <p>Send a text with the details of your request</p>
-          </div>
-          <div class="step-row">
-            <div class="bubble">
-              <h2 class="tablet">2</h2>
-              <h3>Welcome</h3>
-            </div>
-            <p>You will receive a confirmation and quote from our team </p>
-          </div>
-          <div class="step-row">
-            <div class="bubble">
-              <h2 class="tablet">3</h2>
-              <h3>Ok, go for it!</h3>
-            </div>
-            <p>You approve and we send you a secure invoice via SMS.</p>
-          </div>
-          <div class="yellow-delegate">
-            <a href="#" class="btn btn-lg btn-brand-yellow pushdown delegate-now">Delegate Now</a>
-          </div>
-          <div class="pushdown">
-            <h3 class="got-questions">Got any Questions? Check out our FAQ Page!</h3>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </div> -->
 
   <!-- Fourth section -->
-  <div class="aqua-box blured" id="delegate-form">
+  <div class="aqua-box" id="delegate-form">
     <div class="container">
       <h2>delegate now</h2>
       <div>

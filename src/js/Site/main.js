@@ -36,4 +36,31 @@ $(document).ready(function() {
       }
     }
   }));
+
+  //Typing effect on banner
+  var captionLength = 0;
+  var caption = '';
+
+  setTimeout(function(){
+    testTypingEffect();
+  }, 300);
+
+  setTimeout(function(){
+    $('.header-block').addClass('shown');
+  }, 2000);
+
+  function testTypingEffect() {
+    caption = $('.type').data("text");
+    type();
+  }
+
+  function type() {
+    $('.type').html(caption.substr(0, captionLength++));
+    if(captionLength < caption.length+1) {
+      setTimeout(type, 50);
+    } else {
+      captionLength = 0;
+      caption = '';
+    }
+  }
 });  

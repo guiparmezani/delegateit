@@ -268,7 +268,13 @@ header .brand
 
 
 .header-block 
-  padding: 50px 0 15px
+  @include transition(all .8s)
+  padding: 30px 0 15px
+  opacity: 0
+  margin-top: -100px
+  &.shown
+    opacity: 1
+    margin-top: 0
   @media (max-width: $screen-xs-max) 
     padding: 20px 0 15px
 
@@ -303,8 +309,15 @@ header .brand
   font-family: 'museo-sans'
   font-weight: 900
   font-size: 84px
-  color: #32C8DE
   line-height: 68px
+  display: block
+  margin-top: 30px
+  a
+    @include transition(all .2s ease-in-out)
+    color: #32C8DE
+    &:hover
+      text-shadow: 0 0 10px lighten(#32C8DE, 7%)
+
   @media (max-width: $screen-xs-max) 
     font-size: 42px
 
@@ -518,7 +531,7 @@ header .brand
 
 
 .first-paragraph 
-  text-align: center
+  text-align: left
   p 
     font-family: $font-family
     font-size: 25px
