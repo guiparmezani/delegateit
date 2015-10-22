@@ -43,11 +43,11 @@ $(document).ready(function() {
 
   setTimeout(function(){
     testTypingEffect();
-  }, 300);
+  }, 500);
 
   setTimeout(function(){
     $('.header-block').addClass('shown');
-  }, 2000);
+  }, 2200);
 
   function testTypingEffect() {
     caption = $('.type').data("text");

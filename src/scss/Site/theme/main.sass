@@ -5,6 +5,14 @@ $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
   font-family: 'museo-sans'
   src: url('../fonts/MuseoSans-500.otf') /* IE9 Compat Modes */
 
+@keyframes rotate
+  0%
+    right: -400px
+    transform: rotate(65deg)
+  100%
+    right: 0
+    transform: rotate(0)
+
 
 hr 
   border-top: 1px solid #51555F
@@ -352,6 +360,8 @@ header .brand
   background: #2D2F35
   background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
   .second-paragraph
+    @include transition(all 1s)
+    animation: rotate 1s
     @media (min-width: $screen-md)
       margin-bottom: -100px
   @media (min-width: $screen-lg)
