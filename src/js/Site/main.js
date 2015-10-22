@@ -23,17 +23,17 @@ $(document).ready(function() {
     
     if ($(window).width() > 767) {
     	// Side roll animation
-      if (scroll > $('.left-roll').offset().top-halfheight) {
+      if (scroll > $('.left-roll').offset().top - 30 - halfheight) {
       	$('.left-roll').css('left', 0);
       }
-      if (scroll > $('.right-roll').offset().top-halfheight) {
-      	$('.right-roll').css('left', 0);
-      	$('.third-section').css('overflow', 'visible');
-      }
+      // if (scroll > $('.right-roll').offset().top-halfheight) {
+      // 	$('.right-roll').css('left', 0);
+      // 	$('.third-section').css('overflow', 'visible');
+      // }
     	// Unblur animation
-      if (scroll > $('.aqua-box').offset().top-halfheight) {
-        $('.aqua-box').removeClass('blured');
-      }
+      // if (scroll > $('.aqua-box').offset().top-halfheight) {
+      //   $('.aqua-box').removeClass('blured');
+      // }
     }
   }));
 
