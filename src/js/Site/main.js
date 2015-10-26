@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   setTimeout(function(){
     $('.header-block').addClass('shown');
-  }, 2200);
+  }, 1800);
 
   function testTypingEffect() {
     caption = $('.type').data("text");
