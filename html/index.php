@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/site.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="first-section">
@@ -17,19 +18,20 @@
         <header class="navbar navbar-static-top" role="banner" id="top">
           <nav class="navbar navbar-default">
             <div class="navbar-header">
-                <a class="brand" href="#">
-                  <img src="./images/logo-delegateit-gradient.png" title="DelegateIt" style="margin-top: 12px">
-                </a>
-                <div class="navbar-collapse" id="menus">
-                  <a href="#" class="btn btn-lg btn-brand delegate-now">Delegate Now</a>
-                </div>
+              <a class="brand" href="#">
+                <img src="./images/logo-delegateit-gradient.png" title="DelegateIt" style="margin-top: 12px">
+              </a>
+              <div class="navbar-collapse" id="menus">
+                <a href="#" class="btn btn-lg btn-brand delegate-now">Sign up now</a>
               </div>
-            </nav>
+            </div>
+          </nav>
         </header>
         <hr><br>
         <div class="row">
           <div class="first-paragraph col-md-7">
-            <h1 class="type" data-text="Any Product.<br>Any Service."></h1>
+            <h1 class="type" data-text="Any Deliver."></h1>
+            <h1 class="type2" data-text="Any Task."></h1>
             <div class="header-block">
               <p>We're your personal concierge and we'll get it for you.</p>
               <p>Text this number with your request to get started:</p>
@@ -39,12 +41,15 @@
           <div class="second-paragraph col-md-5 desktop">
             <img src="./images/iphone.png" alt="">
           </div>
+          <div class="down-arrow">
+            <a href="#second-section"><i class="fa fa-chevron-down"></i></a>
+          </div>
         </div>
       </div>
     </div>
 
       <!-- Second section -->
-      <div class="container section second-section left-roll">
+      <div class="container section second-section left-roll" id="second-section">
         <div class="row">
           <div class="col-sm-6 right-extra-padding">
             <div class="round-border">

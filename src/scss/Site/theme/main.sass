@@ -13,6 +13,14 @@ $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
     right: 0
     transform: rotate(0)
 
+@keyframes floating
+  0%
+    margin-top: -5px
+  50%
+    margin-top: 0px
+  100%
+    margin-top: -5px
+
 
 hr 
   border-top: 1px solid #51555F
@@ -75,6 +83,9 @@ a
   a
     color: #26a0be
 
+.type2
+  margin-top: -20px
+
 
 
 footer 
@@ -108,10 +119,12 @@ footer
   @media (min-width: $screen-lg)
     left: 2500px
 
-.navbar 
+header.navbar
   border: none
   padding: 20px 0
   margin-bottom: 0
+  nav
+    margin-bottom: 0
 
 
 .navbar-default 
@@ -359,6 +372,22 @@ header .brand
 .first-section 
   background: #2D2F35
   background-image: radial-gradient(50% 100%, #373940 0%, #2D2F35 100%)
+  .down-arrow
+    @extend .text-center
+    @extend .col-lg-12
+    position: relative
+    z-index: 99
+    font-size: 20px
+    margin-top: -150px
+    a
+      animation: floating .8s infinite
+      display: block
+      i
+        color: #FFF
+    @media (max-width: $screen-md-max)
+      display: none
+  .container
+    max-height: 100%
   .second-paragraph
     @include transition(all 1s)
     animation: rotate 1s
