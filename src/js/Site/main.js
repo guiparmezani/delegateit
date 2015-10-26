@@ -23,7 +23,7 @@ $(document).ready(function() {
     
     if ($(window).width() > 767) {
     	// Side roll animation
-      if (scroll > $('.left-roll').offset().top - 100 - halfheight) {
+      if (scroll > $('.left-roll').offset().top - 200 - halfheight) {
       	$('.left-roll').css('left', 0);
       }
       // if (scroll > $('.right-roll').offset().top-halfheight) {
