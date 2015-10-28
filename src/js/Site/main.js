@@ -17,74 +17,39 @@ $(document).ready(function() {
 		$(window).scrollTo('#top', 800);
 	});
 
-	$(window).scroll(_.throttle(function(){
-    var scroll = $(window).scrollTop();
-    var halfheight = $(window).height() / 2;
-    
-    if ($(window).width() > 767) {
-    	// Side roll animation
-      if (scroll > $('.left-roll').offset().top - 200 - halfheight) {
-      	$('.left-roll').css('left', 0);
-      }
-      // if (scroll > $('.right-roll').offset().top-halfheight) {
-      // 	$('.right-roll').css('left', 0);
-      // 	$('.third-section').css('overflow', 'visible');
-      // }
-    	// Unblur animation
-      // if (scroll > $('.aqua-box').offset().top-halfheight) {
-      //   $('.aqua-box').removeClass('blured');
-      // }
-    }
-  }));
-
   $('.down-arrow a').click(function(e) {
     e.preventDefault();
     $(window).scrollTo('#second-section', 600, {offset:20});
   });
 
-  //Typing effect on banner
-  var captionLength = 0;
-  var caption = '';
+  $("#phone").mask("(999) 999-9999");
+  $("#zip").mask("99999");
 
-  setTimeout(function(){
-    testTypingEffect();
-  }, 500);
+  $("#delegate-form").submit(function(event) {
+    /* stop form from submitting normally */
+    event.preventDefault();
 
-  setTimeout(function(){
-    testTypingEffect2();
-  }, 1200);
+    /* get some values from elements on the page: */
+    var $form = $( this ),
+        rawPhoneNumber = $('#phone').val(),
+        url = $form.attr( 'action' );
 
-  setTimeout(function(){
-    $('.header-block').addClass('shown');
-  }, 1800);
+    rawPhoneNumber = rawPhoneNumber.replace(" ", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("(", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace(")", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("-", ""); 
 
-  function testTypingEffect() {
-    caption = $('.type').data("text");
-    type();
-  }
+    /* Send the data using post */
+    var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
 
-  function testTypingEffect2() {
-    caption = $('.type2').data("text");
-    type2();
-  }
+    /* Alerts the results */
+    posting.done(function( data ) {
+      alert('success');
+    });
+  });
 
-  function type() {
-    $('.type').html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
-      setTimeout(type, 50);
-    } else {
-      captionLength = 0;
-      caption = '';
-    }
-  }
+  // setTimeout(function(){
+  //   $('.header-block').addClass('shown');
+  // }, 10);
 
-  function type2() {
-    $('.type2').html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
-      setTimeout(type2, 50);
-    } else {
-      captionLength = 0;
-      caption = '';
-    }
-  }
 });  

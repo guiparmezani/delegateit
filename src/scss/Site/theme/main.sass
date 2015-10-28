@@ -112,12 +112,8 @@ footer
     filter: blur(5px) !important
 
 .left-roll
-  @media (min-width: $screen-lg)
-    left: -2500px
 
 .right-roll
-  @media (min-width: $screen-lg)
-    left: 2500px
 
 header.navbar
   border: none
@@ -377,12 +373,15 @@ header .brand
     @extend .col-lg-12
     position: relative
     z-index: 99
-    font-size: 20px
     margin-top: -150px
     a
       animation: floating .8s infinite
       display: block
       i
+        border: 1px solid #FFF
+        border-radius: 100%
+        padding: 10px
+        font-size: 30px
         color: #FFF
     @media (max-width: $screen-md-max)
       display: none
@@ -396,6 +395,7 @@ header .brand
   @media (min-width: $screen-lg)
     height: 825px
   @media (min-width: $screen-sm)
+    text-align: right
     padding-bottom: 50px
 
 
