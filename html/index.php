@@ -30,9 +30,8 @@
         <hr><br>
         <div class="row">
           <div class="first-paragraph col-md-7">
-            <h1 class="type" data-text="Any Delivery."></h1>
-            <h1 class="type2" data-text="Any Task."></h1>
-            <div class="header-block">
+            <div class="header-block shown">
+            <h1 class="type">Any Delivery.<br>Any Task.</h1>
               <p>We're your personal concierge and we'll get anything for you. Text this number with your request to get started:</p>
               <span class="phone-number"><a href="tel:5123563557">512-359-3557</a></span>
             </div>
@@ -48,7 +47,7 @@
     </div>
 
       <!-- Second section -->
-      <div class="container section second-section left-roll" id="second-section">
+      <div class="container section second-section" id="second-section">
         <div class="row">
           <div class="col-sm-6 right-extra-padding">
             <div class="round-border">
