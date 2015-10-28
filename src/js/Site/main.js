@@ -23,6 +23,7 @@ $(document).ready(function() {
   });
 
   $("#phone").mask("(999) 999-9999");
+  $("#zip").mask("99999");
 
   $("#delegate-form").submit(function(event) {
     /* stop form from submitting normally */
@@ -30,16 +31,21 @@ $(document).ready(function() {
 
     /* get some values from elements on the page: */
     var $form = $( this ),
+        rawPhoneNumber = $('#phone').val(),
         url = $form.attr( 'action' );
 
-    alert($('#phone').val());
+    rawPhoneNumber = rawPhoneNumber.replace(" ", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("(", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace(")", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("-", ""); 
+
     /* Send the data using post */
-    // var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone: $('#phone').val(), zip: $('#zip').val() } );
+    var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
 
     /* Alerts the results */
-    // posting.done(function( data ) {
-    //   alert('success');
-    // });
+    posting.done(function( data ) {
+      alert('success');
+    });
   });
 
   // setTimeout(function(){
