@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/site.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://nathanchapman.net/flex-grid/css/u-tilities.css">
   </head>
   <body>
     <div class="first-section">
@@ -33,7 +34,8 @@
             <h1 class="type" data-text="Any Delivery."></h1>
             <h1 class="type2" data-text="Any Task."></h1>
             <div class="header-block">
-              <p>We're your personal concierge and we'll get anything for you. Text this number with your request to get started:</p>
+              <p>DelegateIt allows you to delegate any task or delivery through a simple text conversation.</p>
+              <p>Text us your request to get started.</p>
               <span class="phone-number"><a href="tel:5123563557">512-359-3557</a></span>
             </div>
           </div>
@@ -50,18 +52,15 @@
       <!-- Second section -->
       <div class="container section second-section left-roll" id="second-section">
         <div class="row">
-          <div class="col-sm-6 right-extra-padding">
-            <div class="round-border">
-              ?
-            </div>
-            <h3>If you could get whatever you want, as soon as possible, would you do it?</h3>
-            <p>We provide a concierge service that is the epitome of simplicity. Send a text with a need and we make it happen with little effort and worry on your part. We stand by at all hours of the day to await your requests!</p>
+          <div class="col-sm-12 right-extra-padding">
+            <h3>How it works</h3>
+            <p>We provide a 24/7 concierge service that is simple and quick to use.</p>
+            <p>Send us a text with your requests and one of our team members will reply with options. All billing is done through a secure Stripe link.</p>
           </div>
-          <div class="col-sm-6 push-far-down">
-            <div class="balloon">
-              <p>No way.</p>
-            </div>
-            <h3>Yes way! How do we do it? We’re glad you asked!</h3>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 right-extra-padding">
+
           </div>
         </div>
       </div>
@@ -114,7 +113,7 @@
       <div>
         <hr>
         <div class="horizontal-center reduced-width">
-          <p>DelegateIt web form is your first step to getting what you want as soon as possible. Fill out the form and we will get back to you with a texted response. We look forward to hearing from you!</p>
+          <p>Fill out the form and we will get back to you with a text message response. We look forward to helping you!</p>
         </div>
         <form action="form-submission.php" method="post" class="horizontal-center">
           <input type="text" name="first_name" placeholder="First Name">
@@ -135,7 +134,7 @@
         <img src="./images/gray-logo.png" title="DelegateIt" style="margin-top: 12px">
       </a>
       <div class="pull-right links">
-        <p><a href="docs/privacy-policy.pdf" style="padding: 0;" target="_blank">Privacy Policy</a> | Any questions contact us at <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
+        <p><a href="docs/privacy-policy.pdf" style="padding: 0;" target="_blank">Privacy Policy</a> | <a href="mailto:Contact@DelegateIt.co">Contact@DelegateIt.co</a></p>
       </div>
     </div>
   </footer>
