@@ -10,6 +10,8 @@
 
     <link rel="stylesheet" href="css/site.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery.maskedinput.min.js"></script>
   </head>
   <body>
     <div class="first-section">
@@ -116,12 +118,14 @@
           <p>DelegateIt web form is your first step to getting what you want as soon as possible. Fill out the form and we will get back to you with a texted response. We look forward to hearing from you!</p>
         </div>
         <form action="form-submission.php" method="post" class="horizontal-center">
-          <input type="text" name="first_name" placeholder="First Name">
-          <input type="text" name="last_name" placeholder="Last Name">
-          <input type="text" name="phone" placeholder="Phone">
-          <input type="text" name="zip" placeholder="Zip Code">
+          <input type="text" id="first_name" name="first_name" placeholder="First Name">
+          <input type="text" id="last_name" name="last_name" placeholder="Last Name">
+          <input type="text" id="phone" name="phone" placeholder="Phone">
+          <input type="text" id="zip" name="zip" placeholder="Zip Code">
 
-          <input type="submit" value="Submit" class="submit" action="form-submission.php" id="formid">
+          <!-- Using test URL temporarly -->
+          <input type="submit" value="Submit" class="submit" action="http://test-gator-api.elasticbeanstalk.com/" id="formid">
+          <!-- <input type="submit" value="Submit" class="submit" action="http://backend-lb-125133299.us-west-2.elb.amazonaws.com/core/customer?sendtext=true" id="formid"> -->
         </form>
       </div>
     </div>

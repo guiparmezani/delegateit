@@ -22,6 +22,26 @@ $(document).ready(function() {
     $(window).scrollTo('#second-section', 600, {offset:20});
   });
 
+  $("#phone").mask("(999) 999-9999");
+
+  $("#delegate-form").submit(function(event) {
+    /* stop form from submitting normally */
+    event.preventDefault();
+
+    /* get some values from elements on the page: */
+    var $form = $( this ),
+        url = $form.attr( 'action' );
+
+    alert($('#phone').val());
+    /* Send the data using post */
+    // var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone: $('#phone').val(), zip: $('#zip').val() } );
+
+    /* Alerts the results */
+    // posting.done(function( data ) {
+    //   alert('success');
+    // });
+  });
+
   // setTimeout(function(){
   //   $('.header-block').addClass('shown');
   // }, 10);
