@@ -25,11 +25,9 @@ $(document).ready(function() {
   $("#phone").mask("(999) 999-9999");
   $("#zip").mask("99999");
 
-  $("#delegate-form").submit(function(event) {
-    /* stop form from submitting normally */
+  $("#delegate-form form").submit(function(event) {
     event.preventDefault();
-
-    /* get some values from elements on the page: */
+    
     var $form = $( this ),
         rawPhoneNumber = $('#phone').val(),
         url = $form.attr( 'action' );
@@ -39,17 +37,19 @@ $(document).ready(function() {
     rawPhoneNumber = rawPhoneNumber.replace(")", ""); 
     rawPhoneNumber = rawPhoneNumber.replace("-", ""); 
 
-    /* Send the data using post */
-    var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
+    // Phone number validation
+    if(rawPhoneNumber === null || rawPhoneNumber === '' || rawPhoneNumber.length !== 10) {
+      $('.aqua-box .reduced-width p:nth-child(2)').css('display', 'block');
+    } else {
+      var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
+    }
 
-    /* Alerts the results */
     posting.done(function( data ) {
-      alert('success');
+      $('.aqua-box form').css('display', 'none');
+      $('.aqua-box .reduced-width p:nth-child(2)').css('display', 'none');
+      $('.aqua-box .reduced-width p:last-child').css('display', 'block');
+      $('.aqua-box .reduced-width').css('margin-bottom', '60px');
     });
   });
-
-  // setTimeout(function(){
-  //   $('.header-block').addClass('shown');
-  // }, 10);
 
 });  

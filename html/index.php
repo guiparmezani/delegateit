@@ -68,6 +68,8 @@
           <hr>
           <div class="horizontal-center reduced-width">
             <p>Fill out the form and we will get back to you with a text message response. We look forward to helping you!</p>
+            <p style="display: none; color: #FF9D00; font-weight: 500;">Invalid phone number.</p>
+            <p style="display: none;">Thank you for signing up for our service!</p>
           </div>
           <form action="http://test-gator-api.elasticbeanstalk.com" method="post" class="horizontal-center">
             <input type="text" id="first_name" name="first_name" placeholder="First Name">
