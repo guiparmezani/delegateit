@@ -5,13 +5,11 @@ $font-family-helvetica:   "Helvetica Neue", Helvetica, Arial, sans-serif
   font-family: 'museo-sans'
   src: url('../fonts/MuseoSans-500.otf') /* IE9 Compat Modes */
 
-@keyframes rotate
+@keyframes scale
   0%
-    right: -400px
-    transform: rotate(65deg)
+    transform: scale(0.7)
   100%
-    right: 0
-    transform: rotate(0)
+    transform: scale(1)
 
 @keyframes floating
   0%
@@ -286,7 +284,6 @@ header .brand
 
 .header-block 
   @include transition(all .8s)
-  padding: 30px 0 15px
   opacity: 0
   margin-top: -100px
   &.shown
@@ -373,7 +370,7 @@ header .brand
     @extend .col-lg-12
     position: relative
     z-index: 99
-    margin-top: -150px
+    margin-top: 40px
     a
       animation: floating .8s infinite
       display: block
@@ -385,15 +382,33 @@ header .brand
         color: #FFF
     @media (max-width: $screen-md-max)
       display: none
+  .row
+    margin-top: 20px
   .container
     max-height: 100%
+  .first-paragraph 
+    text-align: left
+    p 
+      font-family: $font-family
+      font-size: 24px
+      color: #FFFFFF
+      line-height: 31px
+    h1
+      margin-top: 0
+
   .second-paragraph
     @include transition(all 1s)
-    animation: rotate 1s
+    animation: scale 1s
+    img
+      max-width: 100%
     @media (min-width: $screen-md)
       margin-bottom: -100px
+    @media (max-width: $screen-sm-max)
+      margin-top: 20px
+      img
+        margin-top: 40px
   @media (min-width: $screen-lg)
-    height: 825px
+    height: 765px
   @media (min-width: $screen-sm)
     text-align: right
     padding-bottom: 50px
@@ -569,11 +584,3 @@ header .brand
   margin-top: 60px
 
 
-.first-paragraph 
-  text-align: left
-  p 
-    font-family: $font-family
-    font-size: 24px
-    color: #FFFFFF
-    line-height: 31px
-  

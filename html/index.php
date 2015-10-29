@@ -38,8 +38,8 @@
               <p>Text us your request to get started.</p>
               <span class="phone-number"><a href="tel:5123563557">512-359-3557</a></span>
             </div>
-          </div>
-          <div class="second-paragraph col-md-5 desktop">
+          </div><!--
+       --><div class="second-paragraph col-md-5">
             <img src="./images/iphone.png" alt="">
           </div>
           <div class="down-arrow">
