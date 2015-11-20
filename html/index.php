@@ -71,7 +71,7 @@
             <p style="display: none; color: #FF9D00; font-weight: 500;">Invalid phone number.</p>
             <p style="display: none;">Thank you for signing up for our service!</p>
           </div>
-          <form action="http://backend-lb-125133299.us-west-2.elb.amazonaws.com/core/customer?sendtext=true" method="post" class="horizontal-center">
+          <form action="http://gator-api.elasticbeanstalk.com/core/customer?sendtext=true" method="post" class="horizontal-center">
             <input type="text" id="first_name" name="first_name" placeholder="First Name">
             <input type="text" id="last_name" name="last_name" placeholder="Last Name">
             <input type="text" id="phone" name="phone" placeholder="Phone">
