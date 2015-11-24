@@ -41,7 +41,15 @@ $(document).ready(function() {
     if(rawPhoneNumber === null || rawPhoneNumber === '' || rawPhoneNumber.length !== 10) {
       $('.aqua-box .reduced-width p:nth-child(2)').css('display', 'block');
     } else {
-      var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
+      // var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
+      var requestData = { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } ;
+      var posting = 
+      $.ajax(url, {
+        data : JSON.stringify(requestData),
+        contentType : 'application/json',
+        type : 'POST',
+        dataType: 'json'
+      });
     }
 
     posting.done(function( data ) {
