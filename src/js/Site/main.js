@@ -17,74 +17,47 @@ $(document).ready(function() {
 		$(window).scrollTo('#top', 800);
 	});
 
-	$(window).scroll(_.throttle(function(){
-    var scroll = $(window).scrollTop();
-    var halfheight = $(window).height() / 2;
-    
-    if ($(window).width() > 767) {
-    	// Side roll animation
-      if (scroll > $('.left-roll').offset().top - 100 - halfheight) {
-      	$('.left-roll').css('left', 0);
-      }
-      // if (scroll > $('.right-roll').offset().top-halfheight) {
-      // 	$('.right-roll').css('left', 0);
-      // 	$('.third-section').css('overflow', 'visible');
-      // }
-    	// Unblur animation
-      // if (scroll > $('.aqua-box').offset().top-halfheight) {
-      //   $('.aqua-box').removeClass('blured');
-      // }
-    }
-  }));
-
   $('.down-arrow a').click(function(e) {
     e.preventDefault();
     $(window).scrollTo('#second-section', 600, {offset:20});
   });
 
-  //Typing effect on banner
-  var captionLength = 0;
-  var caption = '';
+  $("#phone").mask("(999) 999-9999");
+  $("#zip").mask("99999");
 
-  setTimeout(function(){
-    testTypingEffect();
-  }, 500);
+  $("#delegate-form form").submit(function(event) {
+    event.preventDefault();
+    
+    var $form = $( this ),
+        rawPhoneNumber = $('#phone').val(),
+        url = $form.attr( 'action' );
 
-  setTimeout(function(){
-    testTypingEffect2();
-  }, 1200);
+    rawPhoneNumber = rawPhoneNumber.replace(" ", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("(", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace(")", ""); 
+    rawPhoneNumber = rawPhoneNumber.replace("-", ""); 
 
-  setTimeout(function(){
-    $('.header-block').addClass('shown');
-  }, 2200);
-
-  function testTypingEffect() {
-    caption = $('.type').data("text");
-    type();
-  }
-
-  function testTypingEffect2() {
-    caption = $('.type2').data("text");
-    type2();
-  }
-
-  function type() {
-    $('.type').html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
-      setTimeout(type, 50);
+    // Phone number validation
+    if(rawPhoneNumber === null || rawPhoneNumber === '' || rawPhoneNumber.length !== 10) {
+      $('.aqua-box .reduced-width p:nth-child(2)').css('display', 'block');
     } else {
-      captionLength = 0;
-      caption = '';
+      // var posting = $.post( url, { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } );
+      var requestData = { first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone_number: $('#phone').val(), zip_code: $('#zip').val() } ;
+      var posting = 
+      $.ajax(url, {
+        data : JSON.stringify(requestData),
+        contentType : 'application/json',
+        type : 'POST',
+        dataType: 'json'
+      });
     }
-  }
 
-  function type2() {
-    $('.type2').html(caption.substr(0, captionLength++));
-    if(captionLength < caption.length+1) {
-      setTimeout(type2, 50);
-    } else {
-      captionLength = 0;
-      caption = '';
-    }
-  }
+    posting.done(function( data ) {
+      $('.aqua-box form').css('display', 'none');
+      $('.aqua-box .reduced-width p:nth-child(2)').css('display', 'none');
+      $('.aqua-box .reduced-width p:last-child').css('display', 'block');
+      $('.aqua-box .reduced-width').css('margin-bottom', '60px');
+    });
+  });
+
 });  
